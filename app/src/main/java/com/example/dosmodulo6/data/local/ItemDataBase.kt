@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase
 @Database(entities = [Item::class], version = 1)
 abstract class ItemDataBase : RoomDatabase() {
 
-    abstract fun getItemDao(): itemDAO
+    abstract fun getItemDao(): ItemDAO
 
     companion object {
         @Volatile

@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.Query
 
 @Dao
-interface itemDAO {
+interface ItemDAO {
     @Insert
     suspend fun insertItem(item: Item)
 
