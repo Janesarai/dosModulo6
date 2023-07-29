@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentacion.FragmentAgregar">
+
+    <TextView
+        android:id="@+id/txNombreItem"
+        style="@style/centroyLetragrande"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Nombre item:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <TextView
+        android:id="@+id/txPrecio"
+        style="@style/centroyLetragrande"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Precio :"
+        app:layout_constraintEnd_toEndOf="@+id/edNombreItem"
+        app:layout_constraintStart_toStartOf="@+id/edNombreItem"
+        app:layout_constraintTop_toBottomOf="@+id/edNombreItem" />
+
+    <TextView
+        android:id="@+id/txCantidad"
+        style="@style/centroyLetragrande"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cantidad:"
+        app:layout_constraintEnd_toEndOf="@+id/edPrecio"
+        app:layout_constraintStart_toStartOf="@+id/edPrecio"
+        app:layout_constraintTop_toBottomOf="@+id/edPrecio" />
+
+    <EditText
+        android:id="@+id/edNombreItem"
+        style="@style/centroyLetragrande"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/txNombreItem"
+        app:layout_constraintStart_toStartOf="@+id/txNombreItem"
+        app:layout_constraintTop_toBottomOf="@+id/txNombreItem" />
+
+    <EditText
+        android:id="@+id/edPrecio"
+        style="@style/centroyLetragrande"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="0"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/txPrecio"
+        app:layout_constraintStart_toStartOf="@+id/txPrecio"
+        app:layout_constraintTop_toBottomOf="@+id/txPrecio" />
+
+    <EditText
+        android:id="@+id/edCantidad"
+        style="@style/centroyLetragrande"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="0"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/txCantidad"
+        app:layout_constraintStart_toStartOf="@+id/txCantidad"
+        app:layout_constraintTop_toBottomOf="@+id/txCantidad" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txTotal"
+        style="@style/centroyLetragrande"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Total Actual:"
+        app:layout_constraintEnd_toEndOf="@+id/edCantidad"
+        app:layout_constraintStart_toStartOf="@+id/edCantidad"
+        app:layout_constraintTop_toBottomOf="@+id/edCantidad" />
+
+    <EditText
+        android:id="@+id/edTotalActual"
+        style="@style/centroyLetragrande"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="0"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/txTotal"
+        app:layout_constraintStart_toStartOf="@+id/txTotal"
+        app:layout_constraintTop_toBottomOf="@+id/txTotal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
