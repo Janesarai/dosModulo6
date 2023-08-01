@@ -1,9 +1,13 @@
 package com.example.dosmodulo6.presentacion
 
+import android.icu.text.LocaleDisplayNames.UiListItem
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.view.menu.MenuView.ItemView
+import androidx.navigation.Navigation
+import androidx.navigation.R
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.dosmodulo6.data.local.Item
@@ -31,17 +35,15 @@ import com.example.dosmodulo6.databinding.ItemBinding
 [x] Adapter+ view holder
 [ x] obtener los datos*/
 
-class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>(){
-    lateinit var binding : ItemBinding
-    private  val listItem = mutableListOf<Item>()
-
+class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+    lateinit var binding: ItemBinding
+    private val listItem = mutableListOf<Item>()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        binding = ItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        binding = ItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ItemViewHolder(binding)
     }
-
 
 
     override fun getItemCount(): Int {
@@ -55,15 +57,24 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>(){
     }
 
 
-    class ItemViewHolder(val v: ItemBinding) : RecyclerView.ViewHolder(v.root){
-        fun render(item: Item){
-            v.txNombrecv.text =item.nombre
-            v.txCantidadCv.text= item.cantidad.toString()
+    class ItemViewHolder(val v: ItemBinding) : RecyclerView.ViewHolder(v.root) {
+        fun render(item: Item) {
+            v.txNombrecv.text = item.nombre
+            v.txCantidadCv.text = item.cantidad.toString()
             v.txPrecioCv.text = item.precio.toString()
-            v.txTotalCv.text = (item.precio* item.cantidad).toString()
+            v.txTotalCv.text = (item.precio * item.cantidad).toString()
+            val bundle = Bundle()
+            bundle.putString("nombre",item.nombre)
+            bundle.putString("precio", item.precio.toString())
+            bundle.putString("cantidad", item.cantidad.toString())
+
         }
-    }
-    private fun ItemViewHolder(): ItemAdapter.ItemViewHolder {
 
     }
+    fun setData(listaItem: List<Item>){
+        this.listItem.clear()
+        this.listItem.addAll(listaItem)
+        notifyDataSetChanged()
+    }
+
 }

@@ -9,5 +9,18 @@
         android:id="@+id/fragmentAgregar"
         android:name="com.example.dosmodulo6.presentacion.FragmentAgregar"
         android:label="fragment_agregar"
-        tools:layout="@layout/fragment_agregar" />
+        tools:layout="@layout/fragment_agregar" >
+        <action
+            android:id="@+id/action_fragmentAgregar_to_fragmentList"
+            app:destination="@id/fragmentList" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentList"
+        android:name="com.example.dosmodulo6.presentacion.FragmentList"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_fragmentList_to_fragmentAgregar"
+            app:destination="@id/fragmentAgregar" />
+    </fragment>
 </navigation>

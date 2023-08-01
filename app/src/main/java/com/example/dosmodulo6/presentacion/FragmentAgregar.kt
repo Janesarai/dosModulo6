@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.Navigation
 import com.example.dosmodulo6.R
 import com.example.dosmodulo6.databinding.FragmentAgregarBinding
 
@@ -36,6 +37,7 @@ private val itemVM : ItemVM by activityViewModels()
             var cantidad = binding.edCantidad.text.toString().toInt()
 
             itemVM.insertItem(nombre, precio, cantidad)
+            Navigation.findNavController(requireView()).navigate(R.id.action_fragmentAgregar_to_fragmentList)
         }
     }
 
