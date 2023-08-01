@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="0"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/txPrecio"
         app:layout_constraintStart_toStartOf="@+id/txPrecio"
         app:layout_constraintTop_toBottomOf="@+id/txPrecio" />
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="0"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/txCantidad"
         app:layout_constraintStart_toStartOf="@+id/txCantidad"
         app:layout_constraintTop_toBottomOf="@+id/txCantidad" />
@@ -106,7 +106,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="0"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/txTotal"
         app:layout_constraintStart_toStartOf="@+id/txTotal"
         app:layout_constraintTop_toBottomOf="@+id/txTotal" />
