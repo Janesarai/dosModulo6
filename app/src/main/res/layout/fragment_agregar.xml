@@ -80,6 +80,7 @@
 
     <Button
         android:id="@+id/btnGuardar"
+        style="@style/centroyLetragrande"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -93,21 +94,21 @@
         style="@style/centroyLetragrande"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="84dp"
         android:text="Total Actual:"
         app:layout_constraintEnd_toEndOf="@+id/edCantidad"
         app:layout_constraintStart_toStartOf="@+id/edCantidad"
         app:layout_constraintTop_toBottomOf="@+id/edCantidad" />
 
-    <EditText
-        android:id="@+id/edTotalActual"
+    <TextView
+        android:id="@+id/txTotalTodo"
         style="@style/centroyLetragrande"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_marginTop="36dp"
         android:hint="0"
-        android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/txTotal"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txTotal"
         app:layout_constraintTop_toBottomOf="@+id/txTotal" />
 
